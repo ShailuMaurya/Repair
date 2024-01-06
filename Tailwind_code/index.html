@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;display=swap" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': '576px',
+                    // => @media (min-width: 576px) { ... }
+
+                    'md': '960px',
+                    // => @media (min-width: 960px) { ... }
+
+                    'lg': '1440px',
+                    // => @media (min-width: 1440px) { ... }
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+
+    </script>
+    <title>Document</title>
+
+    <style>
+        .testimonials-wrap {
+            padding: 40px 0;
+        }
+
+        .heading-section {
+            text-align: center;
+        }
+
+        .sub-heading {
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+            display: block;
+            font-weight: 600;
+            color: #2e9ca1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .heading-section h2 {
+            font-size: 28px;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-bottom: 15px;
+        }
+
+        .testimonial-box {
+            display: block;
+            position: relative;
+            padding: 30px 20px;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, .03);
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .08);
+        }
+
+        .user-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: relative;
+            min-width: 80px;
+            background-size: 100%;
+        }
+
+        .carousel-testimonial .item {
+            padding: 30px 10px;
+        }
+
+        .quote {
+            position: absolute;
+            top: -23px;
+            color: #2e9da1;
+            font-size: 27px;
+        }
+
+        .name {
+            margin-bottom: 0;
+            line-height: 14px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .position {
+            color: #adadad;
+            font-size: 14px;
+        }
+
+        .carousel-testimonial .owl-nav {
+            text-align: center;
+        }
+
+        .carousel-testimonial .owl-nav button.owl-next,
+        .carousel-testimonial .owl-nav button.owl-prev {
+            padding: 0 12px !important;
+        }
+
+        .carousel-testimonial .owl-nav button {
+            outline: none;
+            padding: 0;
+        }
+
+        .carousel-testimonial .owl-nav button.owl-next span,
+        .carousel-testimonial .owl-nav button.owl-prev span {
+            display: block;
+            font-size: 40px;
+            width: 25px;
+            height: 25px;
+
+            line-height: 16px;
+        }
+
+        .carousel-testimonial .owl-nav button.owl-next.disabled,
+        .carousel-testimonial .owl-nav button.owl-prev.disabled {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="px-4 py-4 bg-sky-900 text-white  mx-auto flex justify-between  ">
+        <img src="/images/footer-logo.png" class="h-8 px-20 hover:cursor-pointer">
+        <ul class="px-20 flex space-x-10 justify-end ">
+            <li class="mx-2 cursor-pointer font-serif hover:text-teal-400">Home</li>
+            <li class="mx-2 cursor-pointer font-serif hover:text-teal-400">About</li>
+            <li class="mx-2 cursor-pointer font-serif hover:text-teal-400">Services</li>
+            <li class="mx-2 cursor-pointer font-serif hover:text-teal-400">Contact</li>
+        </ul>
+    </nav>
+
+    <main class="bg-teal-100 flex">
+        <div class="main py-5 pl-9 flex">
+            <div class="mt-[90px] ">
+                <div class="text-5xl font-bold   ml-20">
+                    <h2>Welcome to RepairPlus <br> qucik repair </h2>
+                </div>
+                <p class="py-3 w-1/3 ml-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div class="flex gap-10 ml-20">
+                    <button
+                        class="bg-sky-900 px-10 py-3 mt-6 rounded-2xl text-white hover:text-slate-900 hover:bg-teal-400 ">BUY
+                        NOW</button>
+
+                    <button
+                        class="bg-sky-900 px-10 py-3 mt-6 rounded-2xl text-white hover:text-slate-900 hover:bg-teal-400 ">CONTACT
+                        US</button>
+                </div>
+            </div>
+
+
+
+            <div class="flex items-center">
+                <img src="images/banner2.avif" class="w-2/3 mb-20 py-10">
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <section class="service-section">
+        <div class="container flex justify-center items-center pb-20">
+            <div class="service ml-20 mt-[80px] border p-5 text-center flex justify-center items-center flex-col gap-5     
+            transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out ">
+                <div class="text-2xl text-lg font-bold text-sky-900 hover:text-black ">
+                    <h5>SMART PHONE REPAIR</h5>
+                </div>
+                <img src="images/s1.jpg">
+                <p>We specialise in Phone repairs for Apple iPhones, iPad, iPod, Samsung, Galaxy, Sony, HTC,
+                    Nexus, Motorola, Blackberry & Tablets.</p>
+            </div>
+
+
+            <div class="service ml-20 mt-[80px] border p-5 text-center flex justify-center items-center flex-col gap-5 
+            transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out">
+                <div class="text-2xl text-lg font-bold text-sky-900 hover:text-black  ">
+                    <h5>TABLETS & IPAD REPAIR</h5>
+                </div>
+                <img src="images/s2.jpg">
+                <p>If you are facing any problem with your Tablets / Ipads, Kindly pls go through the menttioned
+                    catagories as per requirement.</p>
+            </div>
+
+            <div class="service ml-20 mt-[80px] border p-5 text-center flex justify-center items-center flex-col gap-5
+            transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out">
+                <div class="text-2xl text-lg font-bold text-sky-900 hover:text-black ">
+                    <h5>DESKTOP & MAC REPAIR</h5>
+                </div>
+                <img src="images/s3.jpg">
+                <p>We specialist in providing On-Site Computer Desktop Repair Service and Network Support for all sized
+                    business, On-Site Computer.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="categories-section">
+        <div class="flex bg-black">
+            <div class="h-[100vh] w-full  bg-cover bg-center opacity-95"
+                style="background-image: url(images/categories-bg.jpg)">
+                <div>
+                    <h1 class="font-bold pt-16 text-4xl text-white text-center">Categories</h1>
+
+                    <div class="flex gap-10 p-24 ">
+
+                        <div class="flex w-[30%]">
+                            <div>
+                                <i class="fa-brands fa-apple text-white text-4xl bg-cyan-400 h-48 w-20 py-16 px-8"></i>
+
+                            </div>
+                            <div
+                                class="bg-white flex justify-center items-left flex-col gap-5 p-4  hover:-translate-y-1 hover:scale-20 hover:bg-sky-900  duration-300 hover:text-sky-900 ">
+                                <h5 class="text-xl font-bold ">APPLE IPHONE </h5>
+                                <p class="text-sm font-sans ">Disassembly & replacement guides for
+                                    the original iPhone, iPhone 3GS, iPhone 4... </p>
+                            </div>
+                        </div>
+
+                        <div class="flex w-[30%]">
+                            <div>
+                                <i
+                                    class="fa-brands fa-android text-white text-4xl bg-cyan-400 h-48 w-20 py-16 px-8"></i>
+
+                            </div>
+                            <div
+                                class="bg-white flex justify-center items-left flex-col gap-5 p-4  hover:-translate-y-1 hover:scale-20 hover:bg-sky-900 duration-300 hover:text-sky-900">
+                                <h5 class="text-xl font-bold ">ANDROID PHONE </h5>
+                                <p class="text-sm font-sans">We are pleased to offer a wide range of Android
+                                    repairs services we can repair.. </p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex w-[30%]">
+                            <div>
+                                <i
+                                    class="fa-brands fa-windows text-white text-4xl bg-cyan-400 h-48 w-20 py-16 px-8"></i>
+
+                            </div>
+                            <div
+                                class="bg-white flex justify-center items-left flex-col gap-5 p-4  hover:-translate-y-1 hover:scale-20 hover:bg-sky-900 duration-300 hover:text-sky-900">
+                                <h5 class="text-xl font-bold ">WINDOWS PHONE </h5>
+                                <p class="text-sm font-sans">Repair guides and teardowns for many Windows cell
+                                    phones, a of manufacturers. </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex gap-10 px-24  ">
+
+                        <div class="flex w-[30%]">
+                            <div>
+                                <i class="fa-solid fa-tty text-white text-4xl bg-cyan-400 h-48 w-20 py-16 px-8"></i>
+
+                            </div>
+                            <div
+                                class="bg-white flex justify-center items-left flex-col gap-5 p-4    hover:-translate-y-1 hover:scale-20 hover:bg-sky-900 duration-300 hover:text-sky-900">
+                                <h5 class="text-xl font-bold ">BLACKBERRY PHONE </h5>
+                                <p class="text-sm font-sans ">Are you looking for Blackberry repair? We carry out large
+                                    number repairs every day... </p>
+                            </div>
+                        </div>
+
+                        <div class="flex w-[30%]">
+                            <div>
+                                <i
+                                    class="fa-solid fa-headphones-simple text-white text-4xl bg-cyan-400 h-48 w-20 py-16 px-8"></i>
+
+                            </div>
+                            <div
+                                class="bg-white flex justify-center items-left flex-col gap-5 p-4  hover:-translate-y-1 hover:scale-20 hover:bg-sky-900 duration-300 hover:text-sky-900">
+                                <h5 class="text-xl font-bold ">PHONE ACCESSORY </h5>
+                                <p class="text-sm font-sans">If you have any problems in your phone accessories dont
+                                    worry our will repair... </p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex w-[30%]">
+                            <div>
+                                <i class="fa-solid fa-desktop text-white text-4xl bg-cyan-400 h-48 w-20 py-16 px-8"></i>
+
+                            </div>
+                            <div
+                                class="bg-white flex justify-center items-left flex-col gap-5 p-4  hover:-translate-y-1 hover:scale-20 hover:bg-sky-900 duration-300 hover:text-sky-900">
+                                <h5 class="text-xl font-bold ">DESKTOP LAPTOP </h5>
+                                <p class="text-sm font-sans">Also we done all types of desktop repair,we have
+                                    experienced technicians... </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="flex gap-12 p-20">
+
+        <div class="about-section w-[50%]">
+            <div>
+                <div>
+                    <h1 class="text-4xl font-bold mt-10 ">About Us</h1>
+                </div>
+                <div class="flex gap-3  mt-10">
+                    <img src="images/about1.jpg" alt="">
+                    <img src="images/about2.jpg" alt="">
+                    <img src="images/about3.jpg" alt="">
+                </div>
+                <div class="mt-5">
+                    <p>Our commitment to bring professionalism, good service & trust to the Phone repair service &
+                        maintenance business. We take immense pride in sending some of the most of professional
+                        technicians
+                        to yours phone to fix things that aren't workings</p>
+                </div>
+                <div class="text-2xl mt-5">
+                    <h3>Save time, Save money, With Quality Phone Repair Service, <span class="text-[#43c3ea] hover:">
+                            Purchase - RepairPlus</span></h3>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="Why-Choose-Us w-[50%]">
+            <div>
+                <div class="text-4xl font-bold mt-10 ">
+                    <h1>Why Choose Us</h1>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 mt-10 font-bold text-lg">
+                        <i class="fa-solid fa-wrench text-[#43c3ea] "></i>
+                        <h2>Free Diagnostics</h2>
+                    </div>
+                    <div class="mt-3 pl-6">
+                        <p>Mr.Fixit is a quick and easy way of checking the set up on your Mobile Phones, Desktop &
+                            Laptop,Acessories and ect... We done its free of cost.</p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="flex items-center gap-3 mt-10 font-bold text-lg">
+                        <i class="fa-solid fa-screwdriver-wrench text-[#43c3ea]"></i>
+                        <h2>Free Diagnostics</h2>
+                    </div>
+                    <div class="mt-3 pl-6">
+                        <p>The repair process is fast and convenient & our expert teams of Mr.Fixit repair, If you see a
+                            phone symbol in the top left corner of the screen.</p>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <div class="flex items-center gap-3 mt-10 font-bold text-lg">
+                        <i class="fa-solid fa-phone-volume text-[#43c3ea]"></i>
+                        <h2>Free Diagnostics</h2>
+                    </div>
+                    <div class="mt-3 pl-6">
+                        <p>24x7 techsupport is one of the best services in the Mr.Fixit. 24x7 tech support providing
+                            quality services at anytime, anywhere in the world.</p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <div
+        class="antialiased h-[200px] flex justify-evenly space-x-16 items-center text-center bg-gray-100 text-sky-900 ">
+        <div class="w-48 ">
+            <span class="text-4xl font-bold " x-data="animation()" x-init="animate(2456)" x-text="counter">
+                0
+            </span>
+            <p>Mobiles Repaired</p>
+        </div>
+        <div class="w-48">
+            <span class="text-4xl font-bold " x-data="animation()" x-init="animate(9400)" x-text="counter">
+                0
+            </span>
+            <p>Expert Technicians</p>
+        </div>
+        <div class="w-48">
+            <span class="text-4xl font-bold " x-data="animation()" x-init="animate(11024)" x-text="counter">
+                0
+            </span>
+            <p>Happy Customers</p>
+        </div>
+        <div class="w-48">
+            <span class="text-4xl font-bold " x-data="animation()" x-init="animate(2381)" x-text="counter">
+                0
+            </span>
+            <p>Desktop Repaired</p>
+        </div>
+    </div>
+
+
+
+    <!-- Testimonials -->
+
+    <div class="testimonials-wrap mt-10">
+        <div class="container">
+            <div class="heading-section">
+                <span class="sub-heading text-4xl text-[#43c3ea]">Testimonials</span>
+                <h2>Happy Clients &amp; Feedbacks</h2>
+            </div>
+            <div class="carousel-testimonial owl-carousel">
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/82.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Mark Huff</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/83.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Rodel Golez</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/84.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Ken Bosh</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/85.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Racky Henderson</p>
+                            <span class="position">Father</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/86.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Henry Dee</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/87.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Mark Huff</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/88.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Rodel Golez</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/89.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Ken Bosh</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/90.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Racky Henderson</p>
+                            <span class="position">Father</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/91.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Henry Dee</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-box d-flex">
+                        <div class="user-img"
+                            style="background-image: url(https://randomuser.me/api/portraits/men/92.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote text-sky-900"><i class="fa fa-quote-left"></i></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <p class="name">Mark Huff</p>
+                            <span class="position">Businesswoman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+
+    <section class="flex bg-[#152545] px-20 pt-20  gap-10">
+        <div class="w-[30%]">
+
+            <div>
+                <img src="/images/footer-logo.png" alt="">
+            </div>
+            <div class="text-white mt-4">
+                <p>Repairplus brings 41 years of Digital Repairs experience right to your Device. Our Texhnicians
+                    are
+                    equipped to help you that work best.</p>
+
+                <p class="mt-2"> Our commitment to bring professionalism, good service & trust to the Phone repair
+                    service &
+                    maintenance
+                    business.</p>
+            </div>
+            <div class="mt-2">
+                <button
+                    class="bg-[#43c3ea] text-white font-bold hover:bg-[#152545] hover:border-2 py-2 px-4 mt-3 hover:border-[#43c3ea] rounded-md ">PURCHASE
+                    THEME</button>
+            </div>
+        </div>
+
+
+        <div class="w-[70%] text-white flex justify-evenly gap-5 bg-[#13213e] pt-4">
+            <div>
+                <div class="text-xl font-bold">
+                    <h1>OUR SERVICES</h1>
+                </div>
+                <div class="flex flex-col">
+                    <div class="mt-4">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <a>Smart Phone Repair</a>
+                    </div>
+
+                    <div class="mt-2">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <a>Tablets & iPad Repair</a>
+                    </div>
+
+                    <div class="mt-2">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <a>Desktop & Laptop</a>
+                    </div>
+
+                    <div class="mt-2">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <a>Game System Repair</a>
+                    </div>
+
+
+                    <div class="mt-2">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <a>LCD & LED TV Repair</a>
+                    </div>
+
+
+                    <div class="mt-2">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <a>MP3 & MP4 Player</a>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div>
+                <div class="text-xl font-bold">
+                    <h1>SUBSCRIBE US</h1>
+                </div>
+                <div class="text-white mt-4">
+                    <p>Subscribe to our newsletter!</p>
+                </div>
+                <div class="mt-3 ">
+                    <input type="text" placeholder="Enter Your Email...">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <div class="mt-3">
+                    <p>We don't do mail to spam and<br>your mail id is confidential.</p>
+                </div>
+                <div class="mt-10 place-content-center">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-solid fa-square-rss"></i>
+                    <i class="fa-brands fa-skype"></i>
+
+                </div>
+            </div>
+
+
+
+
+            <div>
+                <div class="text-xl font-bold">
+                    <h1>CONTACT INFO</h1>
+                </div>
+
+                <div class="flex mt-4 gap-5">
+                    <i class="fa-solid fa-house text-[#43c3ea]"></i>
+                    <h2>32, BREAKING STREET,<br>2nd cros, Newyork ,USA 10002</h2>
+                </div>
+
+
+                <div class="flex mt-2 gap-5">
+                    <i class="fa-solid fa-phone text-[#43c3ea]"></i>
+                    <p>CALL US<br> +321 4567 89 012 & 79 023</p>
+                </div>
+
+                <div class="flex mt-2 gap-5">
+                    <i class="fa-solid fa-envelope text-[#43c3ea]"></i>
+                    <p>MAIL US<br>Support@Repairplus.com</p>
+                </div>
+
+                <div class="flex mt-2 gap-5">
+                    <i class="fa-solid fa-clock text-[#43c3ea]"></i>
+                    <p>OPENING TIME<br> Mon - Sat: 09.00am to 18.00pm</p>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </section>
+
+
+    <!-- Sub Footer -->
+
+    <div>
+        <div class="pl-20 bg-[#152545] p-5 text-white text-center">
+            <p>Copyrights © 2017 All Rights Reserved by RepairPlus</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Counter script -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
+    <script>
+        function animation() {
+            return {
+                counter: 0,
+                animate(finalCount) {
+                    let time = 1500 /* Time in milliseconds */
+                    let interval = 9
+                    let step = Math.floor(finalCount * interval / time)
+                    let timer = setInterval(() => {
+                        this.counter = this.counter + step;
+                        if (this.counter >= finalCount + step) {
+                            this.counter = finalCount
+                            clearInterval(timer);
+                            timer = null;
+                            return;
+                        }
+                    }, interval);
+                }
+            };
+        }
+
+    </script>
+
+
+
+
+    <!-- Testimonials script -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $('.carousel-testimonial').owlCarousel({
+            loop: true,
+            margin: 0,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
